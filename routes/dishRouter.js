@@ -72,7 +72,7 @@ dishRouter
   })
   .put((req, res, next) => {
     Dishes.findByIdAndUpdate(
-      res.params.dishId,
+      req.params.dishId,
       {
         $set: req.body,
       },
